@@ -1,0 +1,303 @@
+<https://w3id.org/brstr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/brstr> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/brstr/0.1> .
+<https://w3id.org/brstr> <http://purl.org/dc/termscreator> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Al-Hakam Hamdan" .
+<https://w3id.org/brstr> <http://purl.org/dc/termscreator> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Taras Kozak" .
+<https://w3id.org/brstr> <http://purl.org/dc/termsdescription> "Ontology for describing the bridge structure from a structural analysis perspective"@en .
+<https://w3id.org/brstr> <http://purl.org/dc/termslicense> "https://creativecommons.org/licenses/by/1.0" .
+<https://w3id.org/brstr> <http://purl.org/dc/termsmodified> "23th May 2019" .
+<https://w3id.org/brstr> <http://purl.org/dc/termstitle> "Bridge Structure"@en .
+<https://w3id.org/brstr> <http://purl.org/vocab/vann/preferredNamespacePrefix> "brstr" .
+<https://w3id.org/brstr> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/brstr#" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/brot#adjacentComponent
+<https://w3id.org/brot#adjacentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/brot#locatedAbove
+<https://w3id.org/brot#locatedAbove> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/brot#locatedBelow
+<https://w3id.org/brot#locatedBelow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/brstr#bears
+<https://w3id.org/brstr#bears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brot#adjacentComponent> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brot#locatedBelow> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#getsLoadsFrom> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/brstr#restsOn> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brot#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#comment> "Bei dieser Relation ist angegeben, dass ein Element ein anderes Element traegt, und als Folge die Last bekommt."@de .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#comment> "This relationship points that an element bears an another element, and, as a result, gets some load."@en .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#label> "bears"@en .
+<https://w3id.org/brstr#bears> <http://www.w3.org/2000/01/rdf-schema#label> "traegt"@de .
+# 
+# https://w3id.org/brstr#getsLoadsFrom
+<https://w3id.org/brstr#getsLoadsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brstr#getsLoadsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brstr#getsLoadsFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#getsLoadsFrom> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+# 
+# https://w3id.org/brstr#hasStructuralAssessment
+<https://w3id.org/brstr#hasStructuralAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brstr#hasStructuralAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brstr#StructuralAssessment> .
+<https://w3id.org/brstr#hasStructuralAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a SpatialZone or Component and its corresponding StructuralAssessment."@en .
+<https://w3id.org/brstr#hasStructuralAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "has structural assessment"@en .
+# 
+# https://w3id.org/brstr#loads
+<https://w3id.org/brstr#loads> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brstr#loads> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/brstr#loads> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#loads> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#loads> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a component that transfers loads and the component that receives them."@en .
+<https://w3id.org/brstr#loads> <http://www.w3.org/2000/01/rdf-schema#label> "loads"@en .
+# 
+# https://w3id.org/brstr#restsOn
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brot#adjacentComponent> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brot#locatedAbove> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#loads> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Bei dieser Relation ist angegegeben, dass ein Element A sich auf ein anderes Element B stuetzt und das Element A leitet die Lasten zu dem unteren Element B weiter"@de .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "By this relationship is pointed that a component A rest on an other component B and transmit some load to the lower component B."@en .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#label> "liegt auf"@de .
+<https://w3id.org/brstr#restsOn> <http://www.w3.org/2000/01/rdf-schema#label> "rest on"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/brstr#alignmentWidth
+<https://w3id.org/brstr#alignmentWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#alignmentWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance to alignment reference point"@en .
+<https://w3id.org/brstr#alignmentWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Entfernung zum Alignment-Referenzpunkt"@de .
+<https://w3id.org/brstr#alignmentWidth> <http://www.w3.org/2000/01/rdf-schema#label> "alignment width"@en .
+# 
+# https://w3id.org/brstr#assessmentYear
+<https://w3id.org/brstr#assessmentYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#assessmentYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#StructuralAssessment> .
+<https://w3id.org/brstr#assessmentYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The year in which the bridge structure has been assessed regarding the structural capability"@en .
+<https://w3id.org/brstr#assessmentYear> <http://www.w3.org/2000/01/rdf-schema#label> "Einstufung (Jahr)"@de .
+<https://w3id.org/brstr#assessmentYear> <http://www.w3.org/2000/01/rdf-schema#label> "assessment year"@en .
+# 
+# https://w3id.org/brstr#breakingLimit
+<https://w3id.org/brstr#breakingLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#breakingLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the breaking limit of a construction component."@en .
+<https://w3id.org/brstr#breakingLimit> <http://www.w3.org/2000/01/rdf-schema#label> "Bruchgrenze"@de .
+<https://w3id.org/brstr#breakingLimit> <http://www.w3.org/2000/01/rdf-schema#label> "breaking limit"@en .
+# 
+# https://w3id.org/brstr#degreeOfFreedom
+<https://w3id.org/brstr#degreeOfFreedom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#degreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#LoadBearingComponent> .
+<https://w3id.org/brstr#degreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree of freedom at which a LoadBearingComponent can move or rotate."@en .
+<https://w3id.org/brstr#degreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad"@de .
+<https://w3id.org/brstr#degreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#label> "degree of freedom"@en .
+# 
+# https://w3id.org/brstr#effectiveSupportCapacity
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#LoadBearingComponent> .
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Folgende Werte sind möglich:\n\n- Dezimalwert in [m]\n\n- 'reduced' für reduzierte Stützweite (kennzeichnet zu variierenden Wert)"@de .
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The following values are possible:\n\n- Decimal value in [m].\n\n- 'reduced' for reduced span (indicates value to be varied)"@en .
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Effektive Stützweite"@de .
+<https://w3id.org/brstr#effectiveSupportCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "effective support capacity"@en .
+# 
+# https://w3id.org/brstr#movement
+<https://w3id.org/brstr#movement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#movement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#degreeOfFreedom> .
+<https://w3id.org/brstr#movement> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can move"@en .
+<https://w3id.org/brstr#movement> <http://www.w3.org/2000/01/rdf-schema#label> "movement"@en .
+# 
+# https://w3id.org/brstr#rotation
+<https://w3id.org/brstr#rotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#rotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#degreeOfFreedom> .
+<https://w3id.org/brstr#rotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can rotate"@en .
+<https://w3id.org/brstr#rotation> <http://www.w3.org/2000/01/rdf-schema#label> "rotation"@en .
+# 
+# https://w3id.org/brstr#singleTrackLaneWidth
+<https://w3id.org/brstr#singleTrackLaneWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#singleTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#StructuralAssessmentSTANAG2021> .
+<https://w3id.org/brstr#singleTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "The width of a single track lane"@en .
+<https://w3id.org/brstr#singleTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Einbahnverkehr"@de .
+<https://w3id.org/brstr#singleTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#label> "single track lane width"@en .
+# 
+# https://w3id.org/brstr#spanWidth
+<https://w3id.org/brstr#spanWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#spanWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#Span> .
+<https://w3id.org/brstr#spanWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width which is spanned by a component (bridge, vault, roof, floor slab) between the elements supporting this component (abutment, pier, column, support, load-bearing wall) without other support."@en .
+<https://w3id.org/brstr#spanWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Stützweite"@de .
+<https://w3id.org/brstr#spanWidth> <http://www.w3.org/2000/01/rdf-schema#label> "span width"@en .
+# 
+# https://w3id.org/brstr#structuralCapabilityLevel
+<https://w3id.org/brstr#structuralCapabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#structuralCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#StructuralAssessment> .
+<https://w3id.org/brstr#structuralCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural capability grade based on German standard"@en .
+<https://w3id.org/brstr#structuralCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Tragfähigkeit (nach entsprechender Norm)"@de .
+<https://w3id.org/brstr#structuralCapabilityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "structural capability level"@en .
+# 
+# https://w3id.org/brstr#supportHeight
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#LoadBearingComponent> .
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Gibt die Höhe der Stütze bzw. des stützenden Elements im Vergleich zum Nullpunkt an."@de .
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the height of the column or supporting element compared to the zero point."@en .
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/2000/01/rdf-schema#label> "Stützungshöhe"@de .
+<https://w3id.org/brstr#supportHeight> <http://www.w3.org/2000/01/rdf-schema#label> "support height"@en .
+# 
+# https://w3id.org/brstr#twoTrackLaneWidth
+<https://w3id.org/brstr#twoTrackLaneWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#twoTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/brstr#StructuralAssessmentSTANAG2021> .
+<https://w3id.org/brstr#twoTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "The width of a two track lanes"@en .
+<https://w3id.org/brstr#twoTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Zweibahnverkehr"@de .
+<https://w3id.org/brstr#twoTrackLaneWidth> <http://www.w3.org/2000/01/rdf-schema#label> "two track lane width"@en .
+# 
+# https://w3id.org/brstr#xDegreeOfFreedom
+<https://w3id.org/brstr#xDegreeOfFreedom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#xDegreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#degreeOfFreedom> .
+<https://w3id.org/brstr#xDegreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree of freedom at which a LoadBearingComponent can move or rotate along to the x-axis."@en .
+<https://w3id.org/brstr#xDegreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#label> "degree of freedom along to X-axis"@en .
+# 
+# https://w3id.org/brstr#xMovement
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#movement> .
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#xDegreeOfFreedom> .
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can move along the x-axis."@en .
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (x-Bewegungsrichtung)"@de .
+<https://w3id.org/brstr#xMovement> <http://www.w3.org/2000/01/rdf-schema#label> "X movement"@en .
+# 
+# https://w3id.org/brstr#xRotation
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#rotation> .
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#xDegreeOfFreedom> .
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can rotate along the x-axis."@en .
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (x-Rotationsrichtung)"@de .
+<https://w3id.org/brstr#xRotation> <http://www.w3.org/2000/01/rdf-schema#label> "X rotation"@en .
+# 
+# https://w3id.org/brstr#yDegreeOfFreedom
+<https://w3id.org/brstr#yDegreeOfFreedom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#yDegreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#degreeOfFreedom> .
+# 
+# https://w3id.org/brstr#yMovement
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#movement> .
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#yDegreeOfFreedom> .
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can move along the y-axis."@en .
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (y-Bewegungsrichtung)"@de .
+<https://w3id.org/brstr#yMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Y movement"@en .
+# 
+# https://w3id.org/brstr#yRotation
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#rotation> .
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#yDegreeOfFreedom> .
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can rotate along the y-axis."@en .
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (y-Rotationsrichtung)"@de .
+<https://w3id.org/brstr#yRotation> <http://www.w3.org/2000/01/rdf-schema#label> "Y rotation"@en .
+# 
+# https://w3id.org/brstr#yieldStrength
+<https://w3id.org/brstr#yieldStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#yieldStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the yield strength of a construction component."@en .
+<https://w3id.org/brstr#yieldStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Streckgrenze"@de .
+<https://w3id.org/brstr#yieldStrength> <http://www.w3.org/2000/01/rdf-schema#label> "yield strength"@en .
+# 
+# https://w3id.org/brstr#zDegreeOfFreedom
+<https://w3id.org/brstr#zDegreeOfFreedom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#zDegreeOfFreedom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#degreeOfFreedom> .
+# 
+# https://w3id.org/brstr#zMovement
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#movement> .
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#zDegreeOfFreedom> .
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can move along the z-axis."@en .
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (z-Bewegungsrichtung)"@de .
+<https://w3id.org/brstr#zMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Z movement"@en .
+# 
+# https://w3id.org/brstr#zRotation
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#rotation> .
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/brstr#zDegreeOfFreedom> .
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines at which extend a LoadBearingComponent can rotate along the z-axis."@en .
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/2000/01/rdf-schema#label> "Freiheitsgrad (z-Rotationsrichtung)"@de .
+<https://w3id.org/brstr#zRotation> <http://www.w3.org/2000/01/rdf-schema#label> "Z rotation"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Person
+# 
+# https://w3id.org/brot#Component
+# 
+# https://w3id.org/brot#SpatialZone
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/brstr#AlignmentOrigin
+<https://w3id.org/brstr#AlignmentOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#AlignmentOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the origin of the alignment curve.\n\nRecommended instance: brcomp:Abutment"@en .
+<https://w3id.org/brstr#AlignmentOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment origin"@en .
+# 
+# https://w3id.org/brstr#LoadBearingComponent
+<https://w3id.org/brstr#LoadBearingComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#LoadBearingComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#Component> .
+<https://w3id.org/brstr#LoadBearingComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that takes loads."@en .
+<https://w3id.org/brstr#LoadBearingComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Load-bearing element"@en .
+# 
+# https://w3id.org/brstr#Span
+<https://w3id.org/brstr#Span> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#Span> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/brstr#Span> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance between two intermediate piers for a bridge."@en .
+<https://w3id.org/brstr#Span> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge span"@en .
+# 
+# https://w3id.org/brstr#StructuralAssessment
+<https://w3id.org/brstr#StructuralAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/brstr#StructuralAssessmentDIN1072
+<https://w3id.org/brstr#StructuralAssessmentDIN1072> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#StructuralAssessmentDIN1072> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brstr#StructuralAssessment> .
+<https://w3id.org/brstr#StructuralAssessmentDIN1072> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural assessment according to the German standard DIN1072."@en .
+<https://w3id.org/brstr#StructuralAssessmentDIN1072> <http://www.w3.org/2000/01/rdf-schema#label> "Structural assessment DIN1072"@en .
+# 
+# https://w3id.org/brstr#StructuralAssessmentSTANAG2021
+<https://w3id.org/brstr#StructuralAssessmentSTANAG2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brstr#StructuralAssessmentSTANAG2021> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brstr#StructuralAssessment> .
+<https://w3id.org/brstr#StructuralAssessmentSTANAG2021> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural assessment according to the German standard STANAG2021"@en .
+<https://w3id.org/brstr#StructuralAssessmentSTANAG2021> <http://www.w3.org/2000/01/rdf-schema#label> "Structural assessment STANAG2021"@en .
+# 
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Al-Hakam Hamdan" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "Taras Kozak" .
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

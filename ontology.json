@@ -1,0 +1,602 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Al-Hakam Hamdan"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Taras Kozak"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Al-Hakam Hamdan"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Taras Kozak"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/brot#Component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/brot#SpatialZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/brot#adjacentComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/brot#locatedAbove",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/brot#locatedBelow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/brstr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/termscreator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ],
+  "http://purl.org/dc/termsdescription" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for describing the bridge structure from a structural analysis perspective"
+  } ],
+  "http://purl.org/dc/termslicense" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/1.0"
+  } ],
+  "http://purl.org/dc/termsmodified" : [ {
+    "@value" : "23th May 2019"
+  } ],
+  "http://purl.org/dc/termstitle" : [ {
+    "@language" : "en",
+    "@value" : "Bridge Structure"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "brstr"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/brstr#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/brstr/0.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#AlignmentOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the origin of the alignment curve.\n\nRecommended instance: brcomp:Abutment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Alignment origin"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#LoadBearingComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Component that takes loads."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Load-bearing element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#Span",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance between two intermediate piers for a bridge."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bridge span"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/brot#SpatialZone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#StructuralAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/brstr#StructuralAssessmentDIN1072",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Structural assessment according to the German standard DIN1072."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structural assessment DIN1072"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#StructuralAssessmentSTANAG2021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Structural assessment according to the German standard STANAG2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structural assessment STANAG2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#alignmentWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance to alignment reference point"
+  }, {
+    "@language" : "de",
+    "@value" : "Entfernung zum Alignment-Referenzpunkt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "alignment width"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#assessmentYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The year in which the bridge structure has been assessed regarding the structural capability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Einstufung (Jahr)"
+  }, {
+    "@language" : "en",
+    "@value" : "assessment year"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#bears",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Bei dieser Relation ist angegeben, dass ein Element ein anderes Element traegt, und als Folge die Last bekommt."
+  }, {
+    "@language" : "en",
+    "@value" : "This relationship points that an element bears an another element, and, as a result, gets some load."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bears"
+  }, {
+    "@language" : "de",
+    "@value" : "traegt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brot#adjacentComponent"
+  }, {
+    "@id" : "https://w3id.org/brot#locatedBelow"
+  }, {
+    "@id" : "https://w3id.org/brstr#getsLoadsFrom"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/brstr#restsOn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#breakingLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the breaking limit of a construction component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bruchgrenze"
+  }, {
+    "@language" : "en",
+    "@value" : "breaking limit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#degreeOfFreedom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The degree of freedom at which a LoadBearingComponent can move or rotate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#LoadBearingComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad"
+  }, {
+    "@language" : "en",
+    "@value" : "degree of freedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#effectiveSupportCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Folgende Werte sind möglich:\n\n- Dezimalwert in [m]\n\n- 'reduced' für reduzierte Stützweite (kennzeichnet zu variierenden Wert)"
+  }, {
+    "@language" : "en",
+    "@value" : "The following values are possible:\n\n- Decimal value in [m].\n\n- 'reduced' for reduced span (indicates value to be varied)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#LoadBearingComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Effektive Stützweite"
+  }, {
+    "@language" : "en",
+    "@value" : "effective support capacity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#getsLoadsFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#hasStructuralAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a SpatialZone or Component and its corresponding StructuralAssessment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has structural assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#loads",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between a component that transfers loads and the component that receives them."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "loads"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#movement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can move"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "movement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#degreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#restsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Bei dieser Relation ist angegegeben, dass ein Element A sich auf ein anderes Element B stuetzt und das Element A leitet die Lasten zu dem unteren Element B weiter"
+  }, {
+    "@language" : "en",
+    "@value" : "By this relationship is pointed that a component A rest on an other component B and transmit some load to the lower component B."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "liegt auf"
+  }, {
+    "@language" : "en",
+    "@value" : "rest on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/brot#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brot#adjacentComponent"
+  }, {
+    "@id" : "https://w3id.org/brot#locatedAbove"
+  }, {
+    "@id" : "https://w3id.org/brstr#loads"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#rotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can rotate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#degreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#singleTrackLaneWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The width of a single track lane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessmentSTANAG2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Einbahnverkehr"
+  }, {
+    "@language" : "en",
+    "@value" : "single track lane width"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#spanWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Width which is spanned by a component (bridge, vault, roof, floor slab) between the elements supporting this component (abutment, pier, column, support, load-bearing wall) without other support."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#Span"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Stützweite"
+  }, {
+    "@language" : "en",
+    "@value" : "span width"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#structuralCapabilityLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Structural capability grade based on German standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Tragfähigkeit (nach entsprechender Norm)"
+  }, {
+    "@language" : "en",
+    "@value" : "structural capability level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#supportHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Gibt die Höhe der Stütze bzw. des stützenden Elements im Vergleich zum Nullpunkt an."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the height of the column or supporting element compared to the zero point."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#LoadBearingComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Stützungshöhe"
+  }, {
+    "@language" : "en",
+    "@value" : "support height"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#twoTrackLaneWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The width of a two track lanes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/brstr#StructuralAssessmentSTANAG2021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Zweibahnverkehr"
+  }, {
+    "@language" : "en",
+    "@value" : "two track lane width"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#xDegreeOfFreedom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The degree of freedom at which a LoadBearingComponent can move or rotate along to the x-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "degree of freedom along to X-axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#degreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#xMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can move along the x-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (x-Bewegungsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "X movement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#movement"
+  }, {
+    "@id" : "https://w3id.org/brstr#xDegreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#xRotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can rotate along the x-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (x-Rotationsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "X rotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#rotation"
+  }, {
+    "@id" : "https://w3id.org/brstr#xDegreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#yDegreeOfFreedom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#degreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#yMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can move along the y-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (y-Bewegungsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "Y movement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#movement"
+  }, {
+    "@id" : "https://w3id.org/brstr#yDegreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#yRotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can rotate along the y-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (y-Rotationsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "Y rotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#rotation"
+  }, {
+    "@id" : "https://w3id.org/brstr#yDegreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#yieldStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the yield strength of a construction component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Streckgrenze"
+  }, {
+    "@language" : "en",
+    "@value" : "yield strength"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#zDegreeOfFreedom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#degreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#zMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can move along the z-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (z-Bewegungsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "Z movement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#movement"
+  }, {
+    "@id" : "https://w3id.org/brstr#zDegreeOfFreedom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/brstr#zRotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines at which extend a LoadBearingComponent can rotate along the z-axis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Freiheitsgrad (z-Rotationsrichtung)"
+  }, {
+    "@language" : "en",
+    "@value" : "Z rotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/brstr#rotation"
+  }, {
+    "@id" : "https://w3id.org/brstr#zDegreeOfFreedom"
+  } ]
+} ]

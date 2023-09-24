@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/brstr#"
+     xml:base="https://w3id.org/brstr"
+     xmlns:dc1="http://purl.org/dc/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://w3id.org/brstr">
+        <owl:versionIRI rdf:resource="https://w3id.org/brstr/0.1"/>
+        <dc1:termscreator>
+            <rdf:Description rdf:nodeID="genid1">
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <foaf:name>Al-Hakam Hamdan</foaf:name>
+            </rdf:Description>
+        </dc1:termscreator>
+        <dc1:termscreator>
+            <rdf:Description rdf:nodeID="genid2">
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <foaf:name>Taras Kozak</foaf:name>
+            </rdf:Description>
+        </dc1:termscreator>
+        <dc1:termsdescription xml:lang="en">Ontology for describing the bridge structure from a structural analysis perspective</dc1:termsdescription>
+        <dc1:termslicense>https://creativecommons.org/licenses/by/1.0</dc1:termslicense>
+        <dc1:termsmodified>23th May 2019</dc1:termsmodified>
+        <dc1:termstitle xml:lang="en">Bridge Structure</dc1:termstitle>
+        <vann:preferredNamespacePrefix>brstr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/brstr#</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/brot#adjacentComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#adjacentComponent"/>
+    
+
+
+    <!-- https://w3id.org/brot#locatedAbove -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#locatedAbove"/>
+    
+
+
+    <!-- https://w3id.org/brot#locatedBelow -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brot#locatedBelow"/>
+    
+
+
+    <!-- https://w3id.org/brstr#bears -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brstr#bears">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brot#adjacentComponent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brot#locatedBelow"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#getsLoadsFrom"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/brstr#restsOn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="de">Bei dieser Relation ist angegeben, dass ein Element ein anderes Element traegt, und als Folge die Last bekommt.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This relationship points that an element bears an another element, and, as a result, gets some load.</rdfs:comment>
+        <rdfs:label xml:lang="en">bears</rdfs:label>
+        <rdfs:label xml:lang="de">traegt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#getsLoadsFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brstr#getsLoadsFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#hasStructuralAssessment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brstr#hasStructuralAssessment">
+        <rdfs:range rdf:resource="https://w3id.org/brstr#StructuralAssessment"/>
+        <rdfs:comment xml:lang="en">Relationship between a SpatialZone or Component and its corresponding StructuralAssessment.</rdfs:comment>
+        <rdfs:label xml:lang="en">has structural assessment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#loads -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brstr#loads">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="en">Relation between a component that transfers loads and the component that receives them.</rdfs:comment>
+        <rdfs:label xml:lang="en">loads</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#restsOn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/brstr#restsOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brot#adjacentComponent"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brot#locatedAbove"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#loads"/>
+        <rdfs:domain rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="de">Bei dieser Relation ist angegegeben, dass ein Element A sich auf ein anderes Element B stuetzt und das Element A leitet die Lasten zu dem unteren Element B weiter</rdfs:comment>
+        <rdfs:comment xml:lang="en">By this relationship is pointed that a component A rest on an other component B and transmit some load to the lower component B.</rdfs:comment>
+        <rdfs:label xml:lang="de">liegt auf</rdfs:label>
+        <rdfs:label xml:lang="en">rest on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/brstr#alignmentWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#alignmentWidth">
+        <rdfs:comment xml:lang="en">Distance to alignment reference point</rdfs:comment>
+        <rdfs:comment xml:lang="de">Entfernung zum Alignment-Referenzpunkt</rdfs:comment>
+        <rdfs:label xml:lang="en">alignment width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#assessmentYear -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#assessmentYear">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#StructuralAssessment"/>
+        <rdfs:comment xml:lang="en">The year in which the bridge structure has been assessed regarding the structural capability</rdfs:comment>
+        <rdfs:label xml:lang="de">Einstufung (Jahr)</rdfs:label>
+        <rdfs:label xml:lang="en">assessment year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#breakingLimit -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#breakingLimit">
+        <rdfs:comment xml:lang="en">Defines the breaking limit of a construction component.</rdfs:comment>
+        <rdfs:label xml:lang="de">Bruchgrenze</rdfs:label>
+        <rdfs:label xml:lang="en">breaking limit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#degreeOfFreedom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#degreeOfFreedom">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#LoadBearingComponent"/>
+        <rdfs:comment xml:lang="en">The degree of freedom at which a LoadBearingComponent can move or rotate.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad</rdfs:label>
+        <rdfs:label xml:lang="en">degree of freedom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#effectiveSupportCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#effectiveSupportCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#LoadBearingComponent"/>
+        <rdfs:comment xml:lang="de">Folgende Werte sind möglich:
+
+- Dezimalwert in [m]
+
+- &apos;reduced&apos; für reduzierte Stützweite (kennzeichnet zu variierenden Wert)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The following values are possible:
+
+- Decimal value in [m].
+
+- &apos;reduced&apos; for reduced span (indicates value to be varied)</rdfs:comment>
+        <rdfs:label xml:lang="de">Effektive Stützweite</rdfs:label>
+        <rdfs:label xml:lang="en">effective support capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#movement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#movement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#degreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can move</rdfs:comment>
+        <rdfs:label xml:lang="en">movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#rotation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#rotation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#degreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can rotate</rdfs:comment>
+        <rdfs:label xml:lang="en">rotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#singleTrackLaneWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#singleTrackLaneWidth">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#StructuralAssessmentSTANAG2021"/>
+        <rdfs:comment xml:lang="en">The width of a single track lane</rdfs:comment>
+        <rdfs:label xml:lang="de">Einbahnverkehr</rdfs:label>
+        <rdfs:label xml:lang="en">single track lane width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#spanWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#spanWidth">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#Span"/>
+        <rdfs:comment xml:lang="en">Width which is spanned by a component (bridge, vault, roof, floor slab) between the elements supporting this component (abutment, pier, column, support, load-bearing wall) without other support.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stützweite</rdfs:label>
+        <rdfs:label xml:lang="en">span width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#structuralCapabilityLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#structuralCapabilityLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#StructuralAssessment"/>
+        <rdfs:comment xml:lang="en">Structural capability grade based on German standard</rdfs:comment>
+        <rdfs:label xml:lang="de">Tragfähigkeit (nach entsprechender Norm)</rdfs:label>
+        <rdfs:label xml:lang="en">structural capability level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#supportHeight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#supportHeight">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#LoadBearingComponent"/>
+        <rdfs:comment xml:lang="de">Gibt die Höhe der Stütze bzw. des stützenden Elements im Vergleich zum Nullpunkt an.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the height of the column or supporting element compared to the zero point.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stützungshöhe</rdfs:label>
+        <rdfs:label xml:lang="en">support height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#twoTrackLaneWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#twoTrackLaneWidth">
+        <rdfs:domain rdf:resource="https://w3id.org/brstr#StructuralAssessmentSTANAG2021"/>
+        <rdfs:comment xml:lang="en">The width of a two track lanes</rdfs:comment>
+        <rdfs:label xml:lang="de">Zweibahnverkehr</rdfs:label>
+        <rdfs:label xml:lang="en">two track lane width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#xDegreeOfFreedom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#xDegreeOfFreedom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#degreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">The degree of freedom at which a LoadBearingComponent can move or rotate along to the x-axis.</rdfs:comment>
+        <rdfs:label xml:lang="en">degree of freedom along to X-axis</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#xMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#xMovement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#movement"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#xDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can move along the x-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (x-Bewegungsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">X movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#xRotation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#xRotation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#rotation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#xDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can rotate along the x-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (x-Rotationsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">X rotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#yDegreeOfFreedom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#yDegreeOfFreedom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#degreeOfFreedom"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#yMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#yMovement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#movement"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#yDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can move along the y-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (y-Bewegungsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">Y movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#yRotation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#yRotation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#rotation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#yDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can rotate along the y-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (y-Rotationsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">Y rotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#yieldStrength -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#yieldStrength">
+        <rdfs:comment xml:lang="en">Defines the yield strength of a construction component.</rdfs:comment>
+        <rdfs:label xml:lang="de">Streckgrenze</rdfs:label>
+        <rdfs:label xml:lang="en">yield strength</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#zDegreeOfFreedom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#zDegreeOfFreedom">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#degreeOfFreedom"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#zMovement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#zMovement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#movement"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#zDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can move along the z-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (z-Bewegungsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">Z movement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/brstr#zRotation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/brstr#zRotation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#rotation"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/brstr#zDegreeOfFreedom"/>
+        <rdfs:comment xml:lang="en">Defines at which extend a LoadBearingComponent can rotate along the z-axis.</rdfs:comment>
+        <rdfs:label xml:lang="de">Freiheitsgrad (z-Rotationsrichtung)</rdfs:label>
+        <rdfs:label xml:lang="en">Z rotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/brot#Component -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Component"/>
+    
+
+
+    <!-- https://w3id.org/brot#SpatialZone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#SpatialZone"/>
+    
+
+
+    <!-- https://w3id.org/brstr#AlignmentOrigin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#AlignmentOrigin">
+        <rdfs:comment xml:lang="en">Defines the origin of the alignment curve.
+
+Recommended instance: brcomp:Abutment</rdfs:comment>
+        <rdfs:label xml:lang="en">Alignment origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brstr#LoadBearingComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#LoadBearingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:comment xml:lang="en">Component that takes loads.</rdfs:comment>
+        <rdfs:label xml:lang="en">Load-bearing element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brstr#Span -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#Span">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:comment xml:lang="en">Distance between two intermediate piers for a bridge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bridge span</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brstr#StructuralAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#StructuralAssessment"/>
+    
+
+
+    <!-- https://w3id.org/brstr#StructuralAssessmentDIN1072 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#StructuralAssessmentDIN1072">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brstr#StructuralAssessment"/>
+        <rdfs:comment xml:lang="en">Structural assessment according to the German standard DIN1072.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural assessment DIN1072</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brstr#StructuralAssessmentSTANAG2021 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brstr#StructuralAssessmentSTANAG2021">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brstr#StructuralAssessment"/>
+        <rdfs:comment xml:lang="en">Structural assessment according to the German standard STANAG2021</rdfs:comment>
+        <rdfs:label xml:lang="en">Structural assessment STANAG2021</rdfs:label>
+    </owl:Class>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Al-Hakam Hamdan</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Taras Kozak</foaf:name>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+
